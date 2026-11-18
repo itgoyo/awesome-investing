@@ -11,9 +11,6 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 CONTENT = os.path.join(ROOT, "content")
 
-SKIP_ZH = {"一句话", "自检"}
-SKIP_EN = {"In one sentence", "Self-check"}
-
 CAT_EN = {
     "定投": "Dollar-cost averaging",
     "价值投资": "Value investing",
@@ -79,49 +76,6 @@ def render(tpl, **kw):
     for key, val in kw.items():
         tpl = tpl.replace("{" + key + "}", str(val))
     return tpl
-
-
-def sections(chapter_id, lang):
-    """Pull the H2 topics out of a chapter file, skipping filler headings."""
-    path = os.path.join(CONTENT, chapter_id + ".md")
-    with open(path, encoding="utf-8") as fh:
-        text = fh.read()
-    head, _, tail = text.partition("<!-- en -->")
-    body = head if lang == "zh" else tail
-    skip = SKIP_ZH if lang == "zh" else SKIP_EN
-    out = []
-    for line in body.splitlines():
-        if line.startswith("## "):
-            name = line[3:].strip()
-            if name and name not in skip:
-                out.append(name)
-    return out
-
-
-def chapter_blocks(site, lang):
-    blocks = []
-    for c in site["chapters"]:
-        topics = " · ".join(sections(c["id"], lang))
-        books = []
-        for rel in c["related"]:
-            label = rel[lang]
-            first = rel["files"][0]["path"]
-            books.append(f"[{label}]({first})")
-        n = len(c["related"])
-        if lang == "zh":
-            tag = f"{n} 本配套读物" if n else "无配套书"
-            line_a = f"- [读正文](content/{c['id']}.md) · {len(sections(c['id'], lang))} 节 · {tag}"
-            line_b = f"- 本章小节：{topics}"
-            line_c = "- 配套读物：" + (" · ".join(books) if books else "这一章没有配套书，原因见下方「取舍说明」。")
-        else:
-            tag = f"{n} shelf books" if n else "no shelf book"
-            line_a = f"- [Read the chapter](content/{c['id']}.md) · {len(sections(c['id'], lang))} sections · {tag}"
-            line_b = f"- Sections: {topics}"
-            line_c = "- Paired reading: " + (" · ".join(books) if books else "None, for the reason given under editorial choices.")
-        blocks.append(
-            f"### {c['num']} {c[lang]}\n\n{c[lang + '_sum']}\n\n{line_a}\n{line_b}\n{line_c}"
-        )
-    return "\n\n".join(blocks)
 
 
 def book_blocks(site, lang):
@@ -205,27 +159,7 @@ ZH = """<div align="center">
 
 # **导航：**
 
-[阅读路径](#阅读路径) | [八章正文](#八章正文) | [按问题查](#按问题查) | [书库](#书库) | [术语速查](#术语速查) | [骗局速查](#骗局速查) | [常见问题](#常见问题) | [取舍说明](#取舍说明) | [使用与构建](#使用与构建) | [交易所与社群](#交易所与社群) | [声明](#声明)
-
-## 阅读路径
-
-同一本书，读法不同，结果差很远。先确认自己在哪一格。
-
-| 你是谁 | 从这里开始 | 暂时跳过 | 第一本书 |
-| :--- | :--- | :--- | :--- |
-| 完全新手，还没开过户 | [04 资产配置与定投](content/04-allocation.md) → [05 心理与骗局](content/05-psychology.md) | 02、03、06 | [定投改变命运](books/on-regular-investing/OnRegularInvesting-zh.pdf) |
-| 有账户，但一直在亏 | [05 心理与骗局](content/05-psychology.md) → [01 收益来源](content/01-foundation.md) | 06、07 | [投资最重要的事](books/chinese-canon/《投资最重要的事》.pdf) |
-| 会看盘，想认真选股 | [01](content/01-foundation.md) → [02](content/02-statements.md) → [03](content/03-valuation.md) 顺着读 | 07 | [一本书读懂财报](books/chinese-canon/《一本书读懂财报（全新修订版）》.pdf) |
-| 技术背景，看到高年化就手痒 | [06 量化的边界](content/06-quant.md) → [07 Web3](content/07-web3.md) | 04 前半 | 这两章没有配套书，原因见[取舍说明](#取舍说明) |
-| 只想建立长期习惯 | [04](content/04-allocation.md) → [08 研究系统](content/08-system.md) | 02、03、06 | [指数基金投资指南](books/chinese-canon/《指数基金投资指南》.pdf) |
-
-## 八章正文
-
-每章一篇，中英对照在同一个文件里，页面版带目录与翻页。
-
-**直达**：[01](content/01-foundation.md) · [02](content/02-statements.md) · [03](content/03-valuation.md) · [04](content/04-allocation.md) · [05](content/05-psychology.md) · [06](content/06-quant.md) · [07](content/07-web3.md) · [08](content/08-system.md)
-
-{chapter_blocks}
+[按问题查](#按问题查) | [书库](#书库) | [术语速查](#术语速查) | [骗局速查](#骗局速查) | [常见问题](#常见问题) | [取舍说明](#取舍说明) | [使用与构建](#使用与构建) | [交易所与社群](#交易所与社群) | [声明](#声明)
 
 ## 按问题查
 
@@ -387,27 +321,7 @@ The books were not taken wholesale either. All {titles} entries say what problem
 
 # **Navigation:**
 
-[Reading paths](#reading-paths) | [Eight chapters](#eight-chapters) | [By question](#by-question) | [Library](#library) | [Glossary](#glossary) | [Scam patterns](#scam-patterns) | [FAQ](#faq) | [Editorial choices](#editorial-choices) | [Build](#build) | [Exchanges](#exchanges-and-community) | [Disclaimer](#disclaimer)
-
-## Reading paths
-
-The same book, read differently, gives different results. Find your row first.
-
-| Who you are | Start here | Skip for now | First book |
-| :--- | :--- | :--- | :--- |
-| Complete beginner, no account yet | [04 Allocation](content/04-allocation.md) → [05 Psychology](content/05-psychology.md) | 02, 03, 06 | [On Regular Investing](books/on-regular-investing/OnRegularInvesting-en.pdf) |
-| Have an account, keep losing | [05 Psychology](content/05-psychology.md) → [01 Return](content/01-foundation.md) | 06, 07 | [The Most Important Thing](books/chinese-canon/《投资最重要的事》.pdf) |
-| Read charts, want to pick stocks | [01](content/01-foundation.md) → [02](content/02-statements.md) → [03](content/03-valuation.md) in order | 07 | [Financial Statements in One Book](books/chinese-canon/《一本书读懂财报（全新修订版）》.pdf) |
-| Technical background, tempted by high APY | [06 Limits of quant](content/06-quant.md) → [07 Web3](content/07-web3.md) | first half of 04 | No shelf book, see [editorial choices](#editorial-choices) |
-| Just want a habit that lasts | [04](content/04-allocation.md) → [08 System](content/08-system.md) | 02, 03, 06 | [Index Fund Guide](books/chinese-canon/《指数基金投资指南》.pdf) |
-
-## Eight chapters
-
-One file per chapter, Chinese and English side by side. The page version adds a sidebar and page turns.
-
-**Jump to**：[01](content/01-foundation.md) · [02](content/02-statements.md) · [03](content/03-valuation.md) · [04](content/04-allocation.md) · [05](content/05-psychology.md) · [06](content/06-quant.md) · [07](content/07-web3.md) · [08](content/08-system.md)
-
-{chapter_blocks}
+[By question](#by-question) | [Library](#library) | [Glossary](#glossary) | [Scam patterns](#scam-patterns) | [FAQ](#faq) | [Editorial choices](#editorial-choices) | [Build](#build) | [Exchanges](#exchanges-and-community) | [Disclaimer](#disclaimer)
 
 ## By question
 
@@ -547,7 +461,6 @@ def main():
     for name, tpl, lang in (("README.md", ZH, "zh"), ("README.en.md", EN, "en")):
         text = render(
             tpl,
-            chapter_blocks=chapter_blocks(site, lang),
             book_blocks=book_blocks(site, lang),
             cat_nav=cat_nav(site, lang),
             **stats,
