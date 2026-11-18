@@ -2,8 +2,6 @@
 
 # An Investing Handbook
 
-**Eight chapters of judgment · 21 books on the shelf · 231.3 MB offline**
-
 Material is not scarce. Filtering is. No roster of repositories here, only standards that were taken apart and rewritten.
 
 [Read online](index.html) · [中文](README.md) · [Library](#library) · [Copyright](NOTICE.md)

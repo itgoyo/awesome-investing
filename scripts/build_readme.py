@@ -128,8 +128,6 @@ ZH = """<div align="center">
 
 # 投资学习手册
 
-**八章判断框架 · {titles} 本本地藏书 · {size} 离线可读**
-
 资料不缺，缺的是筛选。这里没有仓库名录，只有拆开、重写过的判断标准。
 
 [在线阅读](index.html) · [English](README.en.md) · [书库](#书库) · [版权声明](NOTICE.md)
@@ -255,8 +253,6 @@ ZH = """<div align="center">
 EN = """<div align="center">
 
 # An Investing Handbook
-
-**Eight chapters of judgment · {titles} books on the shelf · {size} offline**
 
 Material is not scarce. Filtering is. No roster of repositories here, only standards that were taken apart and rewritten.
 
