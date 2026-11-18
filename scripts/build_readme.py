@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""Render README.md and README.en.md from data/repos.json and data/books.json.
-
-Every number in the two READMEs comes from those files, so the tables cannot
-drift away from what the fetcher and the page actually see.
-"""
+"""Render README.md and README.en.md from the same manifest the page uses."""
 
 from __future__ import annotations
 
@@ -14,12 +10,10 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
 
 
-def load(name, fallback=None):
-    path = os.path.join(DATA, name)
-    if not os.path.exists(path):
-        return fallback
-    with open(path, encoding="utf-8") as fh:
-        return json.load(fh)
+def load_site():
+    with open(os.path.join(DATA, "site.js"), encoding="utf-8") as fh:
+        raw = fh.read()
+    return json.loads(raw.split("window.SITE = ", 1)[1].rstrip().rstrip(";"))
 
 
 def human_size(n):
@@ -30,219 +24,189 @@ def human_size(n):
     return f"{max(n, 0) / 1e3:.0f} KB"
 
 
-def stars(n):
-    return f"{n / 1000:.1f}k".replace(".0k", "k") if n >= 1000 else str(n)
-
-
-def repo_rows(repos, lang):
-    out = []
-    cat = {c["id"]: c[lang] for c in repos["categories"]}
-    for i, r in enumerate(repos["repos"], 1):
-        mark = " 📥" if r["local_books"] else ""
-        out.append(
-            f"| {i} | [{r['full_name']}]({r['url']}){mark} | {stars(r['stars'])} | "
-            f"{cat[r['category']]} | {r['pushed_at'][:7]} | {r[lang]} |"
+def chapter_rows(site, lang):
+    rows = []
+    for c in site["chapters"]:
+        rows.append(
+            f"| [{c['num']} {c[lang]}](content/{c['id']}.md) | {c[lang + '_sum']} | {len(c['related'])} |"
         )
-    return "\n".join(out)
+    return "\n".join(rows)
 
 
-def book_rows(books, lang):
-    out = []
-    for b in books["books"]:
-        fmts = " · ".join(
-            f"[{f['label']}]({f['path']})" for f in b["files"]
-        )
-        total = sum(f["bytes"] for f in b["files"])
+def book_rows(site, lang):
+    rows = []
+    for b in site["books"]:
+        fmts = " · ".join(f"[{f['label'].replace('中文', 'ZH')}]({f['path']})" for f in b["files"])
+        total = human_size(sum(f["bytes"] for f in b["files"]))
         title = b[lang]
         author = b["author"] if lang == "zh" else b["author_en"]
-        out.append(f"| {title} | {author} | {fmts} | {human_size(total)} | `{b['repo']}` |")
-    return "\n".join(out)
+        note = b["note_zh"] if lang == "zh" else b["note_en"]
+        rows.append(f"| {title} | {author} | {note} | {fmts} | {total} |")
+    return "\n".join(rows)
 
 
-ZH = """# 投资 · 金融 · Web3 学习资料库
+ZH = """# 投资学习手册
 
 [中文](README.md) | [English](README.en.md)
 
-30 个资料汇总型仓库 + {titles} 本可下载电子书，全部按 GitHub API 核验，星数实时取值，核验日期 {checked}。
+八章判断框架，{titles} 本本地藏书，一个能搜索的双语页面。这里没有链接清单，只有从几十份开源资料里拆出来、重写过的内容。
 
-做这件事的原因很直接：GitHub 上关于投资和 Web3 的学习资料散在几十个 awesome 清单里，一半的链接已经失效，另一半混着交易机器人和回测框架。这里只留「能读的东西」，并且把能找到原书的 PDF 一起存进仓库，离线也能看。
+## 这是什么
 
-## 快速开始
+关于投资的资料不缺，缺的是筛选。开源仓库里塞满了策略代码、失效链接和半成品笔记，能用的部分散落在各处。这份手册做了三件事：
 
-- 浏览器打开 [`index.html`](index.html)：搜索、中英切换、按格式直接下载，双击即可用，不需要起服务。
-- 想拿文件：`books/` 目录下就是 PDF / EPUB / MOBI 原件。
-- 想更新数据：
+- 把资料里反复出现的机制抽出来，写成能直接用的判断标准。
+- 把不可信的部分剔掉，包括过时的操作建议和有偏的方法论。
+- 把能找到原书的 PDF 存进 `books/`，离线也能读。
 
-```bash
-python3 scripts/fetch_books.py    # 下载书库文件，幂等，已有的跳过
-python3 scripts/build_repos.py    # 合并注释与 GitHub 元数据快照
-python3 scripts/build_catalog.py  # 生成页面数据 data/catalog.js
-python3 scripts/build_readme.py   # 重新渲染两份 README
-```
+## 怎么读
 
-## 收录标准
+**完全新手**：先读第 04 章（配置与定投），再读第 05 章（心理与骗局）。先不亏钱，比先赚钱重要。书从《定投改变命运》或《小狗钱钱》开始。
 
-**收**：清单、书单、论文索引、白皮书归档、开源书、课程大纲、学习路线。
+**有点经验**：第 01 到第 03 章顺着读，重点在第 02 章的六个红旗和第 03 章的安全边际。配合《一本书读懂财报》和《聪明的投资者》第八、二十章。
 
-**不收**：策略代码、交易机器人、行情终端、记账软件、量化框架、SDK。哪怕 star 更高也不收，这一条砍掉了 FinRL（17k）、quant-trading（11k）、machine-learning-for-trading（21k）。
+**技术背景**：直接看第 06 章和第 07 章。这两章不给代码也不给标的，只给判断边界，目的是让你在看到漂亮回测或高年化时知道该问什么。
 
-**不收已废弃**：仓库必须存在、未归档、README 可访问、最近一次提交在三年内。
+## 目录
 
-## Top 30 榜单
-
-按 Star 从高到低。📥 表示仓库里的书已经存进本地 `books/`。
-
-| # | 仓库 | Star | 分类 | 最后更新 | 说明 |
-|---|------|------|------|----------|------|
-{repo_rows}
-
-分类分布：量化与金融机器学习 9 个，Web3 资源清单 10 个，开源书与书单 4 个，中文学习资料 4 个，Web3 课程与路线 2 个，股票交易资源 1 个。中文资料的绝对数量比英文少，这是 GitHub 的现状，不是筛选偏向。
+| 章节 | 讲什么 | 相关读物 |
+|------|--------|----------|
+{chapter_rows}
 
 ## 本地书库
 
-共 {titles} 本、{files} 个文件、{size}。中文经典来自 `codeman008/Financial_freedom`，《定投改变命运》中英双语加四语译本来自 `xiaolai/regular-investing-in-box`。
+{titles} 本，{files} 个文件，{size}。每本都写了「读它解决什么问题」，也写了它的局限。
 
-| 书名 | 作者 | 格式 | 大小 | 来源仓库 |
-|------|------|------|------|----------|
+| 书名 | 作者 | 一句话 | 格式 | 大小 |
+|------|------|--------|------|------|
 {book_rows}
+
+## 取舍说明
+
+**为什么量化部分没有本地书。** 中文世界缺少写得好的量化入门书，市面上多是策略集合，读了对判断力没有帮助。这一章只保留回测的四个坑和机器学习的信噪比问题，够用。
+
+**为什么 Web3 部分不给标的。** 标的信息半衰期以周计，写进手册第二天就过时。给判断框架比给名单有用，六问尽调在任何项目上都适用。
+
+**哪些书有局限。** 《乌合之众》是 1895 年的观察随笔，不是实验研究。《富爸爸穷爸爸》的现金流框架值得记，具体操作建议带着强烈的时代与国别色彩。《纳瓦尔宝典》讲的是观念，不含可执行方法。书里能直接拿来用的，只有可验证的机制那一层。
+
+**为什么删掉了仓库名录。** 上一版把几十个仓库列成表格。表格不产生理解，读者还是要一个个点开。这一版把内容拆开重写，来源只保留在版权声明里。
+
+## 使用
+
+浏览器直接打开 `index.html`，中英切换、搜索、按格式下载都可以用，不需要起服务。
+
+重新生成：
+
+```bash
+python3 scripts/fetch_books.py   # 校验并补齐书库文件
+python3 scripts/build_site.py    # 生成页面数据
+python3 scripts/build_readme.py  # 渲染两份 README
+```
 
 ## 目录结构
 
 ```
 .
-├── index.html              # 双语浏览页，双击打开
-├── README.md / README.en.md
-├── books/                  # 本地电子书
-│   ├── on-regular-investing/   # 定投改变命运：中英 PDF/EPUB/MOBI + 法西俄日译本
-│   └── chinese-canon/          # 17 本中文投资经典 PDF
-├── data/
-│   ├── upstream.json        # GitHub API 元数据快照
-│   ├── repos.json           # 仓库 + 中英文注释
-│   ├── books.json           # 文件真实字节数与 sha256
-│   └── catalog.js           # 页面数据
-└── scripts/                 # 抓取、构建、渲染脚本
+├── index.html          # 双语阅读页
+├── content/            # 八章正文，每篇中英对照
+├── books/              # 本地藏书，PDF / EPUB / MOBI
+├── data/site.js        # 页面数据
+└── scripts/            # 抓取、构建、渲染
 ```
-
-## 核验方法
-
-1. 逐个调用 `GET /repos/{{owner}}/{{repo}}`，记录 `stargazers_count`、`archived`、`pushed_at`、`license`。
-2. 调用 `GET /repos/{{owner}}/{{repo}}/readme`，确认 README 可访问。
-3. 下载书籍时先比对仓库文件树，路径对不上就报错，不会静默 404。
-4. 下载完成后按磁盘上的真实字节数与 sha256 写入 `data/books.json`，不抄上游元数据。
-
-## 说明
-
-- 上一版有人给过一份「30 个高星仓库」清单，逐条核验后只有 10 个真实存在，其余 20 个返回 404，星数也普遍对不上（例如某仓库标 390 星，实际 8 星）。这份 README 里每一个仓库都是现查的。
-- 已归档的 `mr-karan/awesome-investing`（2.5k）经典但停更，按「不废弃」标准没有收录。
-- 有 4 个仓库最后更新停在 2024 年，内容仍有效，表中照实标注日期。
 
 ## 免责声明
 
-资料版权归各仓库原作者与出版方所有，本地副本仅供个人学习，请支持正版。仓库只做索引与归档，不构成任何投资建议。
+内容为学习框架，不构成投资建议。书库文件的版权归原作者与出版方所有，详见 [NOTICE.md](NOTICE.md)。
 """
 
-EN = """# Investing · Finance · Web3 Learning Library
+EN = """# An Investing Handbook
 
 [中文](README.md) | [English](README.en.md)
 
-30 aggregation repositories plus {titles} downloadable ebooks, every entry verified against the GitHub API on {checked}, stars read live.
+Eight chapters of judgment frameworks, {titles} books on the local shelf, one searchable bilingual page. There is no link directory here, only material taken apart and rewritten.
 
-The reason is simple. Investing and Web3 study material sits scattered across dozens of awesome lists on GitHub. Half the links rot, the other half mix reading lists with trading bots and backtest frameworks. This repo keeps only things you can read, and stores the actual books it can find so the shelf works offline.
+## What this is
 
-## Quick start
+Investing material is not scarce. Filtering is. Open repositories are full of strategy code, dead links and half-finished notes, with the usable part scattered across all of it. This handbook does three things.
 
-- Open [`index.html`](index.html) in a browser: search, switch language, download by format. No server needed.
-- Want the files: `books/` holds the PDF / EPUB / MOBI originals.
-- Refresh the data:
+- Extracts the mechanisms that keep reappearing and writes them as usable standards.
+- Removes what does not hold, including dated tactics and biased methods.
+- Keeps the actual PDFs it could find in `books/`, so the shelf works offline.
 
-```bash
-python3 scripts/fetch_books.py    # idempotent download, existing files skipped
-python3 scripts/build_repos.py    # merge annotations with the API snapshot
-python3 scripts/build_catalog.py  # emit data/catalog.js
-python3 scripts/build_readme.py   # re-render both READMEs
-```
+## How to read it
 
-## What gets in
+**Complete beginner.** Start with chapter 04 (allocation and averaging), then 05 (psychology and fraud). Not losing comes before earning. Begin with *On Regular Investing*.
 
-**In**: lists, booklists, paper indexes, whitepaper archives, open books, course outlines, learning roadmaps.
+**Some experience.** Read 01 to 03 in order. The six red flags in 02 and the margin of safety in 03 carry the most weight. Pair with *Financial Statements in One Book* and chapters 8 and 20 of *The Intelligent Investor*.
 
-**Out**: strategy code, trading bots, market terminals, budgeting apps, quant frameworks, SDKs. Star count does not buy an exception. This rule dropped FinRL (17k), quant-trading (11k) and machine-learning-for-trading (21k).
+**Technical background.** Go straight to 06 and 07. Neither offers code nor tickers, only the boundaries of judgment, so that a beautiful backtest or a double-digit APY tells you what to ask.
 
-**Out**: abandoned repos. Each one must exist, be unarchived, serve a readable README, and have a push within three years.
+## Contents
 
-## Top 30
-
-Sorted by stars. 📥 means the repo's books are already in `books/`.
-
-| # | Repository | Stars | Type | Last push | What it is |
-|---|------------|-------|------|-----------|------------|
-{repo_rows}
-
-Category spread: 9 quant and financial ML, 10 Web3 resource lists, 4 open books and booklists, 4 Chinese-language collections, 2 Web3 courses and roadmaps, 1 stock trading resource. Chinese material is genuinely scarcer than English on GitHub; that is the platform, not a filter bias.
+| Chapter | What it covers | Books |
+|---------|----------------|-------|
+{chapter_rows}
 
 ## Local library
 
-{titles} titles, {files} files, {size}. The Chinese classics come from `codeman008/Financial_freedom`; the bilingual *On Regular Investing* plus its four translations come from `xiaolai/regular-investing-in-box`.
+{titles} titles, {files} files, {size}. Each entry says what problem the book solves, and where it stops being useful.
 
-| Title | Author | Formats | Size | Source repo |
-|-------|--------|---------|------|-------------|
+| Title | Author | Why it is here | Formats | Size |
+|-------|--------|----------------|---------|------|
 {book_rows}
+
+## Editorial choices
+
+**No quant book on the shelf.** Chinese-language quant writing is mostly strategy collections, which do not improve judgment. The chapter keeps the four backtest holes and the signal-to-noise problem, which is enough.
+
+**No tickers in the Web3 chapter.** Asset-level information has a half-life of weeks. A framework outlasts it; the six due-diligence questions apply to any project.
+
+**Where the books fall short.** *The Crowd* is an 1895 essay, not research. *Rich Dad Poor Dad* has a durable cash-flow idea wrapped in tactics bound to one market and era. *The Almanack of Naval Ravikant* is philosophy without method. What transfers is the layer you can verify.
+
+**Why the repository roster is gone.** The previous version listed dozens of projects as a table. A table produces no understanding; the reader still opens each one. This version rewrites the content and keeps provenance only in the copyright notice.
+
+## Using it
+
+Open `index.html` in a browser. Language switch, search and downloads all work without a server.
+
+Rebuild:
+
+```bash
+python3 scripts/fetch_books.py   # verify and complete the shelf
+python3 scripts/build_site.py    # emit page data
+python3 scripts/build_readme.py  # render both READMEs
+```
 
 ## Layout
 
 ```
 .
-├── index.html              # bilingual browser page, open it directly
-├── README.md / README.en.md
-├── books/                  # local ebooks
-│   ├── on-regular-investing/   # PDF/EPUB/MOBI in zh + en, plus fr/es/ru/ja
-│   └── chinese-canon/          # 17 Chinese investing classics
-├── data/
-│   ├── upstream.json        # GitHub API snapshot
-│   ├── repos.json           # repos with bilingual annotations
-│   ├── books.json           # real bytes and sha256 per file
-│   └── catalog.js           # data the page loads
-└── scripts/                 # fetch, build, render
+├── index.html          # bilingual reader
+├── content/            # eight chapters, zh and en in one file
+├── books/              # PDF / EPUB / MOBI
+├── data/site.js        # page data
+└── scripts/            # fetch, build, render
 ```
-
-## How verification works
-
-1. `GET /repos/{{owner}}/{{repo}}` per repo, recording `stargazers_count`, `archived`, `pushed_at`, `license`.
-2. `GET /repos/{{owner}}/{{repo}}/readme` to confirm the README is reachable.
-3. Book downloads resolve each path against the repo tree first; a mismatch fails loudly instead of a silent 404.
-4. `data/books.json` records bytes and sha256 measured on disk, never copied from upstream metadata.
-
-## Notes
-
-- An earlier "30 high-star repos" list was checked entry by entry: only 10 existed, 20 returned 404, and most star counts were wrong (one repo claimed 390 stars and has 8). Every repo here was queried fresh.
-- The archived `mr-karan/awesome-investing` (2.5k) is a classic but unmaintained, so it fails the not-abandoned rule.
-- Four repos last pushed in 2024 still hold up; the table shows the real date.
-
-## Disclaimer
-
-Copyright stays with the original authors and publishers. Local copies are for personal study; buy the books. This repo is an index and an archive, not investment advice.
 """
 
 
 def main():
-    repos = load("repos.json")
-    books = load("books.json", {"books": []})
-    files = [f for b in books["books"] for f in b["files"]]
-    stats = {
-        "titles": len(books["books"]),
-        "files": len(files),
+    site = load_site()
+    files = [f for b in site["books"] for f in b["files"]]
+    common = {
+        "titles": site["stats"]["titles"],
+        "files": site["stats"]["files"],
         "size": human_size(sum(f["bytes"] for f in files)),
-        "checked": repos["checked_at"],
     }
     for name, tpl, lang in (("README.md", ZH, "zh"), ("README.en.md", EN, "en")):
         text = tpl.format(
-            repo_rows=repo_rows(repos, lang),
-            book_rows=book_rows(books, lang),
-            **stats,
+            chapter_rows=chapter_rows(site, lang),
+            book_rows=book_rows(site, lang),
+            **common,
         )
         with open(os.path.join(ROOT, name), "w", encoding="utf-8") as fh:
             fh.write(text)
-        print(f"wrote {name}")
+        print("wrote", name)
 
 
 if __name__ == "__main__":

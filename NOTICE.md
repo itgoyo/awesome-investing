@@ -4,11 +4,11 @@
 
 This repository has two parts with different copyright status.
 
-## 一、索引、注释与脚本（本仓库原创）
+## 一、正文与代码（本仓库原创）
 
-`README.md`、`README.en.md`、`index.html`、`scripts/`、`data/` 下的中英文说明与结构化数据，由本仓库整理，可自由引用与二次整理。
+`content/` 下八章正文、`README.md`、`README.en.md`、`index.html`、`scripts/` 与 `data/` 的说明文字，均为本仓库重写与整理，可自由引用与二次整理。
 
-The indexes, annotations, page and scripts are compiled here and may be reused freely.
+The eight chapters under `content/`, both READMEs, the page and the scripts are written and compiled here, and may be reused freely.
 
 ## 二、`books/` 下的电子书（版权归原作者与出版方）
 
