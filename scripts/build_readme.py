@@ -159,7 +159,7 @@ ZH = """<div align="center">
 
 # **导航：**
 
-[按问题查](#按问题查) | [书库](#书库) | [术语速查](#术语速查) | [骗局速查](#骗局速查) | [常见问题](#常见问题) | [取舍说明](#取舍说明) | [使用与构建](#使用与构建) | [交易所与社群](#交易所与社群) | [声明](#声明)
+[按问题查](#按问题查) | [书库](#书库) | [术语速查](#术语速查) | [骗局速查](#骗局速查) | [交易所与社群](#交易所与社群) | [声明](#声明)
 
 ## 按问题查
 
@@ -221,40 +221,6 @@ ZH = """<div align="center">
 | 「空投领取，先签名授权一下」 | 授权即交出资产处置权，钱包会被清空 | [07](content/07-web3.md) |
 | 「年化 400%，国库补贴」 | 激励补贴或循环抵押，不是收益是风险溢价 | [07](content/07-web3.md) |
 | 「团队匿名但代码开源」 | 开源不等于无后门，也不等于有人负责 | [07](content/07-web3.md) |
-
-## 常见问题
-
-**为什么没有策略代码？** 代码会过期，且回测好看与实盘赚钱之间隔着交易成本、滑点和容量。第 06 章给的是判断边界，让你看到漂亮曲线时知道该问什么。
-
-**为什么不推荐具体标的？** 标的的信息半衰期以周计，写进来第二天就失效。给框架比给名单有用。
-
-**为什么第 06、07 章没有配套书？** 中文世界缺少写得好的量化与 Web3 入门书，市面上多是策略集合或项目喊单。硬凑一本，不如不凑。
-
-**书能转载或商用吗？** 不能。书库文件版权归原作者与出版方，本仓库只做本地归档。详见 [NOTICE.md](NOTICE.md)。
-
-**为什么删掉了仓库名录？** 表格不产生理解，读者还是要一个个点开。这一版把内容拆开重写，来源只保留在版权声明里。
-
-**会更新吗？** 章节内容相对稳定，书库按需补充。页面与 README 由同一份数据生成，改一处两边同步。
-
-## 取舍说明
-
-**只留机制。** 凡是讲不清收益来源、无法证伪、或者靠「相信我」成立的说法，都没有进正文。留下的部分是能拿去检验的：六个红旗可以对着报表逐条打勾，尽调六问可以对着项目逐条追问。
-
-**具体删了什么。** 策略代码与交易信号全删，会过期。标的推荐全删，半衰期太短。鸡汤段落全删，不产生判断力。畅销书没有照单全收：《乌合之众》是 1895 年的观察随笔而非实验研究，《富爸爸穷爸爸》只留现金流那一句并注明操作建议过时，《纳瓦尔宝典》注明它讲观念、不含方法。
-
-**页面是同一份内容的另一种读法。** `index.html` 带章节侧栏、全文搜索、按格式下载，中英一键切换。README 是它的索引版。
-
-## 使用与构建
-
-把仓库下载到本地，双击 `index.html` 即可：中英切换、搜索、按格式下载都能用，不需要起服务。在 GitHub 网页上点它会显示源码，这是正常的。
-
-重新生成：
-
-```bash
-python3 scripts/fetch_books.py    # 校验并补齐书库文件
-python3 scripts/build_site.py     # 生成页面数据
-python3 scripts/build_readme.py   # 渲染两份 README
-```
 
 ## 交易所与社群
 
@@ -321,7 +287,7 @@ The books were not taken wholesale either. All {titles} entries say what problem
 
 # **Navigation:**
 
-[By question](#by-question) | [Library](#library) | [Glossary](#glossary) | [Scam patterns](#scam-patterns) | [FAQ](#faq) | [Editorial choices](#editorial-choices) | [Build](#build) | [Exchanges](#exchanges-and-community) | [Disclaimer](#disclaimer)
+[By question](#by-question) | [Library](#library) | [Glossary](#glossary) | [Scam patterns](#scam-patterns) | [Exchanges](#exchanges-and-community) | [Disclaimer](#disclaimer)
 
 ## By question
 
@@ -383,40 +349,6 @@ When you hear the left column, read the right one.
 | "To claim the airdrop, just sign this approval" | An approval hands over your assets | [07](content/07-web3.md) |
 | "400% APY, subsidised by the treasury" | Emissions or recursive borrowing. Risk premium, not yield | [07](content/07-web3.md) |
 | "The team is anonymous but the code is open" | Open source is neither an audit nor an owner | [07](content/07-web3.md) |
-
-## FAQ
-
-**Why is there no strategy code?** Code expires, and a good backtest is separated from live profit by costs, slippage and capacity. Chapter 06 gives the boundaries, so a beautiful curve tells you what to ask.
-
-**Why no tickers?** Asset-level information has a half-life of weeks. A framework outlasts it.
-
-**Why no shelf books for chapters 06 and 07?** Chinese-language quant and Web3 writing is mostly strategy collections and project promotion. A forced entry is worse than none.
-
-**Can the books be reposted or used commercially?** No. Copyright stays with the authors and publishers; this repository is a local archive. See [NOTICE.md](NOTICE.md).
-
-**Why was the repository roster removed?** A table produces no understanding; the reader still opens every row. This version rewrites the content and keeps provenance only in the copyright notice.
-
-**Will it be updated?** Chapters are stable; the shelf grows as needed. The page and both READMEs come from one manifest, so they cannot drift apart.
-
-## Editorial choices
-
-**Only mechanisms survive.** Anything that could not explain its source of return, could not be falsified, or rested on "trust me" stayed out. What remains can be checked: the six red flags against a real report, the six questions against a real protocol.
-
-**What was cut.** Strategy code and signals, because they expire. Ticker calls, because they rot. Motivational filler, because it builds no judgment. The popular books were not taken wholesale: *The Crowd* is an 1895 essay, not research; *Rich Dad Poor Dad* keeps one durable idea about cash flow and its tactics are dated; *The Almanack of Naval Ravikant* is philosophy without method.
-
-**The page is the same content read differently.** `index.html` adds a chapter sidebar, full-text search and per-format downloads, with a language switch. This README is its index.
-
-## Build
-
-Clone the repository and open `index.html` in a browser: language switch, search and downloads work without a server. Clicking it on github.com shows the source, which is expected.
-
-Rebuild:
-
-```bash
-python3 scripts/fetch_books.py    # verify and complete the shelf
-python3 scripts/build_site.py     # emit page data
-python3 scripts/build_readme.py   # render both READMEs
-```
 
 ## Exchanges and community
 

@@ -33,7 +33,7 @@ The books were not taken wholesale either. All 21 entries say what problem the b
 
 # **Navigation:**
 
-[By question](#by-question) | [Library](#library) | [Glossary](#glossary) | [Scam patterns](#scam-patterns) | [FAQ](#faq) | [Editorial choices](#editorial-choices) | [Build](#build) | [Exchanges](#exchanges-and-community) | [Disclaimer](#disclaimer)
+[By question](#by-question) | [Library](#library) | [Glossary](#glossary) | [Scam patterns](#scam-patterns) | [Exchanges](#exchanges-and-community) | [Disclaimer](#disclaimer)
 
 ## By question
 
@@ -156,40 +156,6 @@ When you hear the left column, read the right one.
 | "To claim the airdrop, just sign this approval" | An approval hands over your assets | [07](content/07-web3.md) |
 | "400% APY, subsidised by the treasury" | Emissions or recursive borrowing. Risk premium, not yield | [07](content/07-web3.md) |
 | "The team is anonymous but the code is open" | Open source is neither an audit nor an owner | [07](content/07-web3.md) |
-
-## FAQ
-
-**Why is there no strategy code?** Code expires, and a good backtest is separated from live profit by costs, slippage and capacity. Chapter 06 gives the boundaries, so a beautiful curve tells you what to ask.
-
-**Why no tickers?** Asset-level information has a half-life of weeks. A framework outlasts it.
-
-**Why no shelf books for chapters 06 and 07?** Chinese-language quant and Web3 writing is mostly strategy collections and project promotion. A forced entry is worse than none.
-
-**Can the books be reposted or used commercially?** No. Copyright stays with the authors and publishers; this repository is a local archive. See [NOTICE.md](NOTICE.md).
-
-**Why was the repository roster removed?** A table produces no understanding; the reader still opens every row. This version rewrites the content and keeps provenance only in the copyright notice.
-
-**Will it be updated?** Chapters are stable; the shelf grows as needed. The page and both READMEs come from one manifest, so they cannot drift apart.
-
-## Editorial choices
-
-**Only mechanisms survive.** Anything that could not explain its source of return, could not be falsified, or rested on "trust me" stayed out. What remains can be checked: the six red flags against a real report, the six questions against a real protocol.
-
-**What was cut.** Strategy code and signals, because they expire. Ticker calls, because they rot. Motivational filler, because it builds no judgment. The popular books were not taken wholesale: *The Crowd* is an 1895 essay, not research; *Rich Dad Poor Dad* keeps one durable idea about cash flow and its tactics are dated; *The Almanack of Naval Ravikant* is philosophy without method.
-
-**The page is the same content read differently.** `index.html` adds a chapter sidebar, full-text search and per-format downloads, with a language switch. This README is its index.
-
-## Build
-
-Clone the repository and open `index.html` in a browser: language switch, search and downloads work without a server. Clicking it on github.com shows the source, which is expected.
-
-Rebuild:
-
-```bash
-python3 scripts/fetch_books.py    # verify and complete the shelf
-python3 scripts/build_site.py     # emit page data
-python3 scripts/build_readme.py   # render both READMEs
-```
 
 ## Exchanges and community
 
