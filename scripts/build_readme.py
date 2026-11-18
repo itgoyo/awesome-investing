@@ -228,7 +228,7 @@ ZH = """<div align="center">
 
 加密资产交易在部分司法辖区受限，请先确认所在地法规。本金可能全部损失，任何平台的「活动」「空投」都不构成收益承诺。
 
-**延伸导航**：[币圈导航 · 虚拟加密货币资源大全](https://github.com/itgoyo/awesome-crypto) —— 按交易所、空投、钱包、链上数据、NFT、DAO、跨链工具分类的入口清单。分工是：那个仓库回答「入口在哪」，这个仓库回答「值不值得进」。
+[币圈导航 · 虚拟加密货币资源大全](https://github.com/itgoyo/awesome-crypto) —— 按交易所、空投、钱包、链上数据、NFT、DAO、跨链工具分类的入口清单。
 
 | 平台 | 链接 | 说明 |
 | :--- | :--- | :--- |
@@ -240,8 +240,6 @@ ZH = """<div align="center">
 | 火币 HTX | [htx.com](https://www.htx.com.am/invite/zh-cn/1f?invite_code=xpi6a223) | 邀请码 **xpi6a223**，手续费减免 20% |
 | 抹茶 MEXC | [mexc.co](https://promote.mexc.com/r/wIE7fPvG) | 邀请码 **wIE7fPvG**，手续费减免 20% |
 | 电报交流群 | [@jmhbgroup](https://t.me/jmhbgroup) | 交流加密资产相关内容。群里不提供喊单、代操作、保本承诺，遇到这几种说法按[骗局速查](#骗局速查)处理 |
-
-**关于「手续费减免 20%」。** 比例与活动规则由平台随时调整，以注册页实际显示为准。邀请码只在注册时生效，注册后再补填无效。
 
 ## 声明
 
@@ -358,7 +356,7 @@ This section is access information for the repository and has nothing to do with
 
 Crypto trading is restricted in some jurisdictions. Check your local rules first. Principal can be lost in full, and no platform campaign or airdrop is a promise of return.
 
-**Further navigation**: [Crypto navigation · a full directory of virtual-currency resources](https://github.com/itgoyo/awesome-crypto) — entry points grouped by exchange, airdrop, wallet, on-chain data, NFT, DAO and bridges. The split is simple: that repository says where the doors are, this one says whether to walk in.
+[Crypto navigation · a full directory of virtual-currency resources](https://github.com/itgoyo/awesome-crypto) — entry points grouped by exchange, airdrop, wallet, on-chain data, NFT, DAO and bridges.
 
 | Platform | Link | Notes |
 | :--- | :--- | :--- |
@@ -370,8 +368,6 @@ Crypto trading is restricted in some jurisdictions. Check your local rules first
 | HTX | [htx.com](https://www.htx.com.am/invite/zh-cn/1f?invite_code=xpi6a223) | Code **xpi6a223**, 20% off fees |
 | MEXC | [mexc.co](https://promote.mexc.com/r/wIE7fPvG) | Code **wIE7fPvG**, 20% off fees |
 | Telegram group | [@jmhbgroup](https://t.me/jmhbgroup) | General crypto discussion. No signals, no managed accounts, no guaranteed returns; if you meet those, apply the [scam patterns](#scam-patterns) |
-
-**On the 20%.** Rates and campaign rules change without notice; the registration page is the authority. A code only works at signup.
 
 ## Disclaimer
 

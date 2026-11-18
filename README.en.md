@@ -163,7 +163,7 @@ This section is access information for the repository and has nothing to do with
 
 Crypto trading is restricted in some jurisdictions. Check your local rules first. Principal can be lost in full, and no platform campaign or airdrop is a promise of return.
 
-**Further navigation**: [Crypto navigation · a full directory of virtual-currency resources](https://github.com/itgoyo/awesome-crypto) — entry points grouped by exchange, airdrop, wallet, on-chain data, NFT, DAO and bridges. The split is simple: that repository says where the doors are, this one says whether to walk in.
+[Crypto navigation · a full directory of virtual-currency resources](https://github.com/itgoyo/awesome-crypto) — entry points grouped by exchange, airdrop, wallet, on-chain data, NFT, DAO and bridges.
 
 | Platform | Link | Notes |
 | :--- | :--- | :--- |
@@ -175,8 +175,6 @@ Crypto trading is restricted in some jurisdictions. Check your local rules first
 | HTX | [htx.com](https://www.htx.com.am/invite/zh-cn/1f?invite_code=xpi6a223) | Code **xpi6a223**, 20% off fees |
 | MEXC | [mexc.co](https://promote.mexc.com/r/wIE7fPvG) | Code **wIE7fPvG**, 20% off fees |
 | Telegram group | [@jmhbgroup](https://t.me/jmhbgroup) | General crypto discussion. No signals, no managed accounts, no guaranteed returns; if you meet those, apply the [scam patterns](#scam-patterns) |
-
-**On the 20%.** Rates and campaign rules change without notice; the registration page is the authority. A code only works at signup.
 
 ## Disclaimer
 
