@@ -163,6 +163,8 @@
 
 加密资产交易在部分司法辖区受限，请先确认所在地法规。本金可能全部损失，任何平台的「活动」「空投」都不构成收益承诺。
 
+**延伸导航**：[币圈导航 · 虚拟加密货币资源大全](https://github.com/itgoyo/awesome-crypto) —— 按交易所、空投、钱包、链上数据、NFT、DAO、跨链工具分类的入口清单。分工是：那个仓库回答「入口在哪」，这个仓库回答「值不值得进」。
+
 | 平台 | 链接 | 说明 |
 | :--- | :--- | :--- |
 | 币安 Binance | [binance.com](https://accounts.binance.com/zh-CN/register?ref=FANXIAN) | 邀请码 **FANXIAN**，手续费减免 20%。平台另有 Alpha 积分活动，积分能换什么以当期公告为准，可看[教程检索](https://www.youtube.com/results?search_query=%E5%B8%81%E5%AE%89alpha) |

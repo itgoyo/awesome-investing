@@ -163,6 +163,8 @@ This section is access information for the repository and has nothing to do with
 
 Crypto trading is restricted in some jurisdictions. Check your local rules first. Principal can be lost in full, and no platform campaign or airdrop is a promise of return.
 
+**Further navigation**: [Crypto navigation · a full directory of virtual-currency resources](https://github.com/itgoyo/awesome-crypto) — entry points grouped by exchange, airdrop, wallet, on-chain data, NFT, DAO and bridges. The split is simple: that repository says where the doors are, this one says whether to walk in.
+
 | Platform | Link | Notes |
 | :--- | :--- | :--- |
 | Binance | [binance.com](https://accounts.binance.com/zh-CN/register?ref=FANXIAN) | Code **FANXIAN**, 20% off fees. The platform also runs an Alpha points campaign; what points are worth depends on the current announcement ([search tutorials](https://www.youtube.com/results?search_query=%E5%B8%81%E5%AE%89alpha)) |
