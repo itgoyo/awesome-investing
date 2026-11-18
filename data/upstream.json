@@ -1,0 +1,275 @@
+{
+ "checked_at": "2026-11-18",
+ "repos": [
+  {
+   "full_name": "wilsonfreitas/awesome-quant",
+   "stars": 30699,
+   "pushed_at": "2026-11-18",
+   "created_at": "2015-09-30",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": "A curated list of insanely awesome libraries, packages and resources for Quants (Quantitative Finance)"
+  },
+  {
+   "full_name": "bitcoinbook/bitcoinbook",
+   "stars": 25359,
+   "pushed_at": "2024-12-26",
+   "created_at": "2013-08-11",
+   "archived": false,
+   "license": "NOASSERTION",
+   "desc_upstream": "Mastering Bitcoin 3rd Edition - Programming the Open Blockchain"
+  },
+  {
+   "full_name": "ethereumbook/ethereumbook",
+   "stars": 21545,
+   "pushed_at": "2026-10-12",
+   "created_at": "2016-08-10",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": "Mastering Ethereum: 2nd Edition, by Andreas M. Antonopoulos, Gavin Wood, Carlo Parisi, Alessandro Mazza, Niccolò Pozzolini"
+  },
+  {
+   "full_name": "chaozh/awesome-blockchain-cn",
+   "stars": 18948,
+   "pushed_at": "2024-02-29",
+   "created_at": "2017-03-12",
+   "archived": false,
+   "license": "Apache-2.0",
+   "desc_upstream": "收集所有区块链(BlockChain)技术开发相关资料，包括Fabric和Ethereum开发资料"
+  },
+  {
+   "full_name": "paperswithbacktest/awesome-systematic-trading",
+   "stars": 15438,
+   "pushed_at": "2026-09-28",
+   "created_at": "2022-02-05",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": "A curated list of awesome libraries, packages, strategies, books, blogs, tutorials for systematic trading."
+  },
+  {
+   "full_name": "smartcontractkit/full-blockchain-solidity-course-js",
+   "stars": 14044,
+   "pushed_at": "2024-06-12",
+   "created_at": "2022-01-17",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": "Learn Blockchain, Solidity, and Full Stack Web3 Development with Javascript"
+  },
+  {
+   "full_name": "OffcierCia/DeFi-Developer-Road-Map",
+   "stars": 10900,
+   "pushed_at": "2026-11-03",
+   "created_at": "2021-06-20",
+   "archived": false,
+   "license": "NOASSERTION",
+   "desc_upstream": "DeFi Developer roadmap is a curated Developer handbook which includes a list of the best tools for DApps development, resources and references! "
+  },
+  {
+   "full_name": "firmai/financial-machine-learning",
+   "stars": 8843,
+   "pushed_at": "2025-01-03",
+   "created_at": "2019-03-21",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": "A curated list of practical financial machine learning tools and applications."
+  },
+  {
+   "full_name": "codeman008/Financial_freedom",
+   "stars": 8462,
+   "pushed_at": "2026-08-06",
+   "created_at": "2023-09-27",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": "Technical guide to making money and investing（最全赚钱投资指南）"
+  },
+  {
+   "full_name": "georgezouq/awesome-ai-in-finance",
+   "stars": 6766,
+   "pushed_at": "2026-11-12",
+   "created_at": "2018-08-29",
+   "archived": false,
+   "license": "CC0-1.0",
+   "desc_upstream": "🔬 A curated list of awesome LLMs & deep learning strategies & tools in financial market."
+  },
+  {
+   "full_name": "xiaolai/regular-investing-in-box",
+   "stars": 6480,
+   "pushed_at": "2026-11-17",
+   "created_at": "2019-07-13",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": "定投改变命运 —— 让时间陪你慢慢变富 https://onregularinvesting.com"
+  },
+  {
+   "full_name": "DApp-Learning-DAO/DApp-Learning",
+   "stars": 5827,
+   "pushed_at": "2026-03-30",
+   "created_at": "2021-06-08",
+   "archived": false,
+   "license": "MIT",
+   "desc_upstream": "Dapp learning project for developers at all stages. Becoming and cultivating sovereign individuals. Nonprofit organization."
+  },
+  {
+   "full_name": "thuquant/awesome-quant",
+   "stars": 5738,
+   "pushed_at": "2026-11-17",
+   "created_at": "2016-05-10",
+   "archived": false,
+   "license": "MIT",
+   "desc_upstream": "中国的Quant相关资源索引"
+  },
+  {
+   "full_name": "wangzhe3224/awesome-systematic-trading",
+   "stars": 5404,
+   "pushed_at": "2026-11-03",
+   "created_at": "2021-12-11",
+   "archived": false,
+   "license": "MIT",
+   "desc_upstream": "A curated list of insanely awesome libraries, packages and resources for systematic trading. Crypto, Stock, Futures, Options, CFDs, FX, and more | 量化交易 | 量化投资"
+  },
+  {
+   "full_name": "grananqvist/Awesome-Quant-Machine-Learning-Trading",
+   "stars": 4148,
+   "pushed_at": "2025-05-21",
+   "created_at": "2018-11-05",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": "Quant/Algorithm trading resources with an emphasis on Machine Learning"
+  },
+  {
+   "full_name": "Scanate/EthList",
+   "stars": 3873,
+   "pushed_at": "2026-05-04",
+   "created_at": "2017-04-16",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": "The Comprehensive Ethereum Reading List"
+  },
+  {
+   "full_name": "FrancescoXX/free-Web3-resources",
+   "stars": 3662,
+   "pushed_at": "2024-10-11",
+   "created_at": "2021-12-20",
+   "archived": false,
+   "license": "MIT",
+   "desc_upstream": "A list of FREE resources to make Web3 accessible to everyone."
+  },
+  {
+   "full_name": "yjjnls/awesome-blockchain",
+   "stars": 3645,
+   "pushed_at": "2026-11-16",
+   "created_at": "2018-03-30",
+   "archived": false,
+   "license": "MIT",
+   "desc_upstream": "⚡️Curated list of resources for the development and applications of blockchain."
+  },
+  {
+   "full_name": "jpantunes/awesome-cryptoeconomics",
+   "stars": 1772,
+   "pushed_at": "2024-06-17",
+   "created_at": "2017-10-20",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": "An awesome curated list of Cryptoeconomic research and learning materials"
+  },
+  {
+   "full_name": "ong/awesome-decentralized-finance",
+   "stars": 1672,
+   "pushed_at": "2026-01-14",
+   "created_at": "2018-10-15",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": "A curated list of awesome decentralized finance projects"
+  },
+  {
+   "full_name": "fltenwall/web3-awesome",
+   "stars": 1421,
+   "pushed_at": "2024-11-01",
+   "created_at": "2022-04-14",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": "web3百科全书👏🏻 打造 web3 全球第一中文资源"
+  },
+  {
+   "full_name": "JumpCrypto/crypto-reading-list",
+   "stars": 1415,
+   "pushed_at": "2024-08-06",
+   "created_at": "2022-01-02",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": ""
+  },
+  {
+   "full_name": "0voice/Awesome-QuantDev-Learn",
+   "stars": 1213,
+   "pushed_at": "2025-07-04",
+   "created_at": "2025-06-30",
+   "archived": false,
+   "license": "NOASSERTION",
+   "desc_upstream": "本仓库面向所有对量化分析或开发感兴趣的量化交易从业者，提供系统性学习量化开发的技术路线，从数据获取、策略开发、回测系统到实盘部署。"
+  },
+  {
+   "full_name": "steven2358/awesome-blockchain-ai",
+   "stars": 1161,
+   "pushed_at": "2026-02-06",
+   "created_at": "2018-01-10",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": "A curated list of Blockchain projects for Artificial Intelligence and Machine Learning"
+  },
+  {
+   "full_name": "itgoyo/awesome-crypto",
+   "stars": 1101,
+   "pushed_at": "2026-10-30",
+   "created_at": "2025-03-22",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": "币圈导航虚拟加密货币资源大全，手动整理的全网最全虚拟货币学习资料，涵盖了中心化交易所（如欧易OKX、币安Binance、Gate.io）、NFT市场、DeFi工具、加密钱包、巨鲸追踪和数据分析等，帮助用户轻松导航加密货币世界。涉及币圈导航、虚拟货币、交易所返佣、Web3.0等内容本指南将持续更新，力求保持最新、最全面的币圈信息，币圈导航祝各位早点财务自由。👉 www.0xnav.com"
+  },
+  {
+   "full_name": "shi-rudo/awesome-stock-trading",
+   "stars": 946,
+   "pushed_at": "2026-10-13",
+   "created_at": "2023-04-11",
+   "archived": false,
+   "license": "NOASSERTION",
+   "desc_upstream": "Curated list of resources for traders, such as tools, websites, and books related to trading stocks."
+  },
+  {
+   "full_name": "bekatom/awesome-ethereum",
+   "stars": 910,
+   "pushed_at": "2026-10-01",
+   "created_at": "2016-03-01",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": ":zap: Awesome Ethereum Resources"
+  },
+  {
+   "full_name": "ahmet/awesome-web3",
+   "stars": 909,
+   "pushed_at": "2026-11-16",
+   "created_at": "2022-01-16",
+   "archived": false,
+   "license": "CC0-1.0",
+   "desc_upstream": "A curated list of awesome Web3 resources, libraries, tools and more."
+  },
+  {
+   "full_name": "SoYuCry/awesome-quant-interview",
+   "stars": 909,
+   "pushed_at": "2026-08-25",
+   "created_at": "2026-03-27",
+   "archived": false,
+   "license": "MIT",
+   "desc_upstream": "量化金融八股文 | 55道高频考点 × 详细解答 | 数学统计 · Python/C++ · 因子与Alpha策略 · 机器学习/深度学习 | 面试 + 学习两用指南"
+  },
+  {
+   "full_name": "imbaniac/awesome-blockchain",
+   "stars": 895,
+   "pushed_at": "2024-04-02",
+   "created_at": "2017-01-17",
+   "archived": false,
+   "license": "none",
+   "desc_upstream": "Curated list of blockchain services and exchanges 🔥🏦🔥🏦🔥🏦🔥"
+  }
+ ]
+}

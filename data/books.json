@@ -1,0 +1,680 @@
+{
+  "books": [
+    {
+      "id": "on-regular-investing",
+      "zh": "定投改变命运",
+      "en": "On Regular Investing",
+      "author": "李笑来",
+      "author_en": "Li Xiaolai",
+      "category": "定投",
+      "tags": [
+        "定投",
+        "长期主义",
+        "普通投资者",
+        "开源书"
+      ],
+      "repo": "xiaolai/regular-investing-in-box",
+      "edition_zh": "作者开源全书，中英双语，PDF / EPUB / MOBI 三种格式齐全",
+      "edition_en": "Author-released open book, Chinese and English, in PDF / EPUB / MOBI",
+      "tags_en": [
+        "DCA",
+        "long term",
+        "retail investor",
+        "open book"
+      ],
+      "files": [
+        {
+          "label": "中文 PDF",
+          "path": "books/on-regular-investing/OnRegularInvesting-zh.pdf",
+          "bytes": 15850409,
+          "sha256": "652bbacf96f11e47ebe0f56e88ee16901ebf6aefca10cbb556e0ea6686436153",
+          "upstream": "https://raw.githubusercontent.com/xiaolai/regular-investing-in-box/HEAD/docs/pdf/on-regularinvesting-cn.pdf"
+        },
+        {
+          "label": "中文 EPUB",
+          "path": "books/on-regular-investing/OnRegularInvesting-zh.epub",
+          "bytes": 14156748,
+          "sha256": "ef0365dc9d046e33553205d65e1ec253dffb9652ff39988c4e0d6ce044ed5a6e",
+          "upstream": "https://raw.githubusercontent.com/xiaolai/regular-investing-in-box/HEAD/docs/epub/OnRegularInvesting_cn.epub"
+        },
+        {
+          "label": "中文 MOBI",
+          "path": "books/on-regular-investing/OnRegularInvesting-zh.mobi",
+          "bytes": 4416311,
+          "sha256": "18ecf8104b6e0f50da548965485b2550f1bdbbc283c0cd3fd773764b37822a5f",
+          "upstream": "https://raw.githubusercontent.com/xiaolai/regular-investing-in-box/HEAD/docs/mobi/OnRegularInvesting_cn.mobi"
+        },
+        {
+          "label": "EN PDF",
+          "path": "books/on-regular-investing/OnRegularInvesting-en.pdf",
+          "bytes": 15387412,
+          "sha256": "871db7135f186df3502791bb083b2d52b6473fdcd564f2776c80cc10cd45fab5",
+          "upstream": "https://raw.githubusercontent.com/xiaolai/regular-investing-in-box/HEAD/docs/pdf/on-regularinvesting-en.pdf"
+        },
+        {
+          "label": "EN EPUB",
+          "path": "books/on-regular-investing/OnRegularInvesting-en.epub",
+          "bytes": 13945611,
+          "sha256": "bcfe3c4db11cc9f834b09ccbeb0029017241ff5680094e6e9733ec553ca18404",
+          "upstream": "https://raw.githubusercontent.com/xiaolai/regular-investing-in-box/HEAD/docs/epub/OnRegularInvesting_en.epub"
+        },
+        {
+          "label": "EN MOBI",
+          "path": "books/on-regular-investing/OnRegularInvesting-en.mobi",
+          "bytes": 4263237,
+          "sha256": "ee9bbe5e3addbcde678474773f104f55362ead978b3665a058cf9c9fb05aa596",
+          "upstream": "https://raw.githubusercontent.com/xiaolai/regular-investing-in-box/HEAD/docs/mobi/OnRegularInvesting_en.mobi"
+        }
+      ]
+    },
+    {
+      "id": "on-regular-investing-translations",
+      "zh": "定投改变命运（多语言译本）",
+      "en": "On Regular Investing (translations)",
+      "author": "李笑来",
+      "author_en": "Li Xiaolai",
+      "category": "定投",
+      "tags": [
+        "定投",
+        "译本"
+      ],
+      "repo": "xiaolai/regular-investing-in-box",
+      "edition_zh": "法、西、俄、日四语译本，社区翻译",
+      "edition_en": "French, Spanish, Russian and Japanese translations from the community",
+      "tags_en": [
+        "DCA",
+        "translation"
+      ],
+      "files": [
+        {
+          "label": "FR PDF",
+          "path": "books/on-regular-investing/translations/OnRegularInvesting-fr.pdf",
+          "bytes": 2304571,
+          "sha256": "168349d6eea21c70104ef11a34b4c07585229ad894fb3ab31dc5bbf43e6fa633",
+          "upstream": "https://raw.githubusercontent.com/xiaolai/regular-investing-in-box/HEAD/Translations/French.pdf"
+        },
+        {
+          "label": "ES PDF",
+          "path": "books/on-regular-investing/translations/OnRegularInvesting-es.pdf",
+          "bytes": 2735328,
+          "sha256": "8dc98efea6ffdde87e162323820733b3689a60ee1b451ecd35d2e83e1f72d621",
+          "upstream": "https://raw.githubusercontent.com/xiaolai/regular-investing-in-box/HEAD/Translations/Spanish/Spanish.pdf"
+        },
+        {
+          "label": "RU PDF",
+          "path": "books/on-regular-investing/translations/OnRegularInvesting-ru.pdf",
+          "bytes": 2145756,
+          "sha256": "a945aa9e6a6747722f8e0bbba111a24f175d0c1cf43ef9c7adb6c6ddff9457c3",
+          "upstream": "https://raw.githubusercontent.com/xiaolai/regular-investing-in-box/HEAD/Translations/Russian.pdf"
+        },
+        {
+          "label": "JA PDF",
+          "path": "books/on-regular-investing/translations/OnRegularInvesting-ja.pdf",
+          "bytes": 2267580,
+          "sha256": "37cc585e8bb0d9a3b58b0112c3f136c65a530308509b6163d55b169c5d92b10d",
+          "upstream": "https://raw.githubusercontent.com/xiaolai/regular-investing-in-box/HEAD/Translations/Japanese/%E7%A9%8D%E7%AB%8B%E6%8A%95%E8%B3%87%E3%80%80%E6%9D%8E%E7%AC%91%E6%9D%A5%E3%81%AE%E8%87%AA%E5%B7%B1%E4%BF%AE%E7%B7%B4.pdf"
+        }
+      ]
+    },
+    {
+      "id": "dingtou-dala",
+      "zh": "定投——大佬的自我修养",
+      "en": "Regular Investing: A Veteran's Discipline",
+      "author": "李笑来",
+      "author_en": "Li Xiaolai",
+      "category": "定投",
+      "tags": [
+        "定投",
+        "短篇",
+        "讲义"
+      ],
+      "repo": "xiaolai/regular-investing-in-box",
+      "edition_zh": "同一仓库内的定投讲义 PDF，篇幅短，适合先读",
+      "edition_en": "A short lecture PDF from the same repo, a good warm-up read",
+      "tags_en": [
+        "DCA",
+        "short read",
+        "lecture notes"
+      ],
+      "files": [
+        {
+          "label": "中文 PDF",
+          "path": "books/on-regular-investing/DingTou-Dala-Ziwo-Xiuyang.pdf",
+          "bytes": 2679810,
+          "sha256": "bc14035af779c763b19c8fe4c0a9aa06f0d33466c6bbb86a930ae0bb8d9c3b4a",
+          "upstream": "https://raw.githubusercontent.com/xiaolai/regular-investing-in-box/HEAD/%E5%AE%9A%E6%8A%95-%E5%A4%A7%E4%BD%AC%E7%9A%84%E8%87%AA%E6%88%91%E4%BF%AE%E5%85%BB.pdf"
+        }
+      ]
+    },
+    {
+      "id": "everybody-ought-to-be-rich",
+      "zh": "人人都该富有（1929）",
+      "en": "Everybody Ought to Be Rich (1929)",
+      "author": "约翰·拉斯科布",
+      "author_en": "John J. Raskob",
+      "category": "市场史",
+      "tags": [
+        "历史文献",
+        "定投起源",
+        "公共领域"
+      ],
+      "repo": "xiaolai/regular-investing-in-box",
+      "edition_zh": "1929 年拉斯科布原版短文，定投思想的源头文献",
+      "edition_en": "The 1929 Raskob essay that started the dollar-cost-averaging argument",
+      "tags_en": [
+        "historical",
+        "origin of DCA",
+        "public domain"
+      ],
+      "files": [
+        {
+          "label": "EN PDF",
+          "path": "books/on-regular-investing/EverybodyOughtToBeRich-1929.pdf",
+          "bytes": 846103,
+          "sha256": "b4775bcc0778bc80ec15cefa1a7355f71ec551611b8a79402f5ae9e3e0c42139",
+          "upstream": "https://raw.githubusercontent.com/xiaolai/regular-investing-in-box/HEAD/docs/blog/Everybody-Ought-to-Be-Rich-1929-by-John-Raskob/EverybodyOughtToBeRich.pdf"
+        }
+      ]
+    },
+    {
+      "id": "congming-de-touzizhe",
+      "zh": "聪明的投资者",
+      "en": "The Intelligent Investor",
+      "author": "本杰明·格雷厄姆",
+      "author_en": "Benjamin Graham",
+      "category": "价值投资",
+      "tags": [
+        "价值投资",
+        "安全边际",
+        "经典"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "value investing",
+        "margin of safety",
+        "classic"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《聪明的投资者》(美)本杰明·格雷厄姆.pdf",
+          "bytes": 17700030,
+          "sha256": "9c79eadae43e75dd9867f44936088dd7be4ff023eb6783ebd3d962a750d09b47",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E8%81%AA%E6%98%8E%E7%9A%84%E6%8A%95%E8%B5%84%E8%80%85%E3%80%8B%28%E7%BE%8E%29%E6%9C%AC%E6%9D%B0%E6%98%8E%C2%B7%E6%A0%BC%E9%9B%B7%E5%8E%84%E5%A7%86.pdf"
+        }
+      ]
+    },
+    {
+      "id": "zhengquan-fenxi",
+      "zh": "证券分析",
+      "en": "Security Analysis",
+      "author": "本杰明·格雷厄姆 / 戴维·多德",
+      "author_en": "Benjamin Graham & David Dodd",
+      "category": "价值投资",
+      "tags": [
+        "价值投资",
+        "估值",
+        "经典"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "value investing",
+        "valuation",
+        "classic"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《证券分析》本杰明•格雷厄姆.pdf",
+          "bytes": 2253864,
+          "sha256": "caa4f0775d46e4a6cf365233b7ca35b066db237c90a7f72aae8ed1a73b96581f",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E8%AF%81%E5%88%B8%E5%88%86%E6%9E%90%E3%80%8B%E6%9C%AC%E6%9D%B0%E6%98%8E%E2%80%A2%E6%A0%BC%E9%9B%B7%E5%8E%84%E5%A7%86.pdf"
+        }
+      ]
+    },
+    {
+      "id": "qiongchali-baodian",
+      "zh": "穷查理宝典",
+      "en": "Poor Charlie's Almanack",
+      "author": "彼得·考夫曼 编",
+      "author_en": "Peter D. Kaufman (ed.)",
+      "category": "价值投资",
+      "tags": [
+        "芒格",
+        "多元思维模型"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "Munger",
+        "mental models"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《穷查理宝典》.pdf",
+          "bytes": 3668853,
+          "sha256": "f746fd7a134805cef641b3e9725c05b1baf1cfa865f9f972c11e7f161de29c35",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E7%A9%B7%E6%9F%A5%E7%90%86%E5%AE%9D%E5%85%B8%E3%80%8B.pdf"
+        }
+      ]
+    },
+    {
+      "id": "zenyang-xuanze-chengzhanggu",
+      "zh": "怎样选择成长股",
+      "en": "Common Stocks and Uncommon Profits",
+      "author": "菲利普·费雪",
+      "author_en": "Philip Fisher",
+      "category": "价值投资",
+      "tags": [
+        "成长股",
+        "费雪",
+        "十五要点"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "growth stocks",
+        "Fisher",
+        "15 points"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《怎样选择成长股》.pdf",
+          "bytes": 5896379,
+          "sha256": "7b1b526b8fa697bb250e92390a051238d4e64eb388e804f943e7e8c86ceb71d6",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E6%80%8E%E6%A0%B7%E9%80%89%E6%8B%A9%E6%88%90%E9%95%BF%E8%82%A1%E3%80%8B.pdf"
+        }
+      ]
+    },
+    {
+      "id": "zenyang-xuanze-chengzhanggu-quanyi",
+      "zh": "怎样选择成长股（最新全译版）",
+      "en": "Common Stocks and Uncommon Profits (full translation)",
+      "author": "菲利普·费雪",
+      "author_en": "Philip Fisher",
+      "category": "价值投资",
+      "tags": [
+        "成长股",
+        "全译本"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "growth stocks",
+        "full translation"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《怎样选择成长股最新全译版》.pdf",
+          "bytes": 23671244,
+          "sha256": "005473cd727a5460c637e72ba5773f6808178f6ab0d2879add61054fb71f5284",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E6%80%8E%E6%A0%B7%E9%80%89%E6%8B%A9%E6%88%90%E9%95%BF%E8%82%A1%E6%9C%80%E6%96%B0%E5%85%A8%E8%AF%91%E7%89%88%E3%80%8B.pdf"
+        }
+      ]
+    },
+    {
+      "id": "touzi-zhong-zui-jiannan-de-shi",
+      "zh": "投资中最简单的事",
+      "en": "The Simplest Thing in Investing",
+      "author": "邱国鹭",
+      "author_en": "Qiu Guolu",
+      "category": "价值投资",
+      "tags": [
+        "A股",
+        "本土实践",
+        "行业格局"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "A-shares",
+        "China practice",
+        "industry structure"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《投资中最简单的事》.pdf",
+          "bytes": 5541240,
+          "sha256": "ce2b1fc89e39518c614b2d6500f8cf3d36b242ec418c8cf63f6752f9356c84c8",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E6%8A%95%E8%B5%84%E4%B8%AD%E6%9C%80%E7%AE%80%E5%8D%95%E7%9A%84%E4%BA%8B%E3%80%8B.pdf"
+        }
+      ]
+    },
+    {
+      "id": "touzi-zhong-zui-zhongyao-de-shi",
+      "zh": "投资最重要的事",
+      "en": "The Most Important Thing",
+      "author": "霍华德·马克斯",
+      "author_en": "Howard Marks",
+      "category": "价值投资",
+      "tags": [
+        "周期",
+        "风险",
+        "备忘录"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "cycles",
+        "risk",
+        "memos"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《投资最重要的事》.pdf",
+          "bytes": 18511342,
+          "sha256": "74b4dd02318b4f7919f571b7c461247f953e63a80627f0add9378651f2bd8be4",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E6%8A%95%E8%B5%84%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E4%BA%8B%E3%80%8B.pdf"
+        }
+      ]
+    },
+    {
+      "id": "yibenshu-du-dong-caibao",
+      "zh": "一本书读懂财报",
+      "en": "Financial Statements in One Book",
+      "author": "肖星",
+      "author_en": "Xiao Xing",
+      "category": "财报分析",
+      "tags": [
+        "财报",
+        "入门",
+        "三张表"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "statements",
+        "beginner",
+        "three statements"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《一本书读懂财报（全新修订版）》.pdf",
+          "bytes": 2480146,
+          "sha256": "7290b4d614179db9c36a72219fd1699712e8459474453f9e6343d7c5b8c61490",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E4%B8%80%E6%9C%AC%E4%B9%A6%E8%AF%BB%E6%87%82%E8%B4%A2%E6%8A%A5%EF%BC%88%E5%85%A8%E6%96%B0%E4%BF%AE%E8%AE%A2%E7%89%88%EF%BC%89%E3%80%8B.pdf"
+        }
+      ]
+    },
+    {
+      "id": "zhishu-jijin-zhinan",
+      "zh": "指数基金投资指南",
+      "en": "The Index Fund Guide",
+      "author": "银行螺丝钉",
+      "author_en": "Yinhang Luosiding",
+      "category": "指数基金",
+      "tags": [
+        "指数基金",
+        "定投",
+        "估值表"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "index funds",
+        "DCA",
+        "valuation table"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《指数基金投资指南》.pdf",
+          "bytes": 11569731,
+          "sha256": "b0ef848fa6e8c685900cbc3be4cd89b7ec327d3840aa56ca5494bc51f9b6d8f9",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E6%8C%87%E6%95%B0%E5%9F%BA%E9%87%91%E6%8A%95%E8%B5%84%E6%8C%87%E5%8D%97%E3%80%8B.pdf"
+        }
+      ]
+    },
+    {
+      "id": "gushi-changxian-fabao",
+      "zh": "股市长线法宝（第5版）",
+      "en": "Stocks for the Long Run (5th ed.)",
+      "author": "杰里米·西格尔",
+      "author_en": "Jeremy Siegel",
+      "category": "资产配置",
+      "tags": [
+        "长期收益",
+        "数据实证"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "long-run returns",
+        "empirical data"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《股市长线法宝（原书第5版）》.pdf",
+          "bytes": 18089613,
+          "sha256": "482fea9564551200c3c7b584f5a928ff566378cc8b88c52fb9b97c64dfbd38e1",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E8%82%A1%E5%B8%82%E9%95%BF%E7%BA%BF%E6%B3%95%E5%AE%9D%EF%BC%88%E5%8E%9F%E4%B9%A6%E7%AC%AC5%E7%89%88%EF%BC%89%E3%80%8B.pdf"
+        }
+      ]
+    },
+    {
+      "id": "zichan-peizhi-de-yishu",
+      "zh": "资产配置的艺术",
+      "en": "The Art of Asset Allocation",
+      "author": "戴维·达斯特",
+      "author_en": "David Darst",
+      "category": "资产配置",
+      "tags": [
+        "资产配置",
+        "组合管理"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "asset allocation",
+        "portfolio"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《资产配置的艺术(高清)》.pdf",
+          "bytes": 25400086,
+          "sha256": "bbed88bf80e0575f8edd487d2b8238e5469978857f35d962ee03e741b020eaf1",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E8%B5%84%E4%BA%A7%E9%85%8D%E7%BD%AE%E7%9A%84%E8%89%BA%E6%9C%AF%28%E9%AB%98%E6%B8%85%29%E3%80%8B.pdf"
+        }
+      ]
+    },
+    {
+      "id": "gupiao-zuoshou-huiyilu",
+      "zh": "股票作手回忆录",
+      "en": "Reminiscences of a Stock Operator",
+      "author": "埃德温·勒菲弗",
+      "author_en": "Edwin Lefèvre",
+      "category": "市场史",
+      "tags": [
+        "交易史",
+        "利弗莫尔",
+        "传记"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "trading history",
+        "Livermore",
+        "biography"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《股票作手回忆录》.pdf",
+          "bytes": 3289912,
+          "sha256": "b30459d46ebb1b2f455d6e1d6d81a55a165eaf1888484f059347933051f3d3b0",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E8%82%A1%E7%A5%A8%E4%BD%9C%E6%89%8B%E5%9B%9E%E5%BF%86%E5%BD%95%E3%80%8B.pdf"
+        }
+      ]
+    },
+    {
+      "id": "wuhezhizhong",
+      "zh": "乌合之众",
+      "en": "The Crowd: A Study of the Popular Mind",
+      "author": "古斯塔夫·勒庞",
+      "author_en": "Gustave Le Bon",
+      "category": "投资心理",
+      "tags": [
+        "群体心理",
+        "认知偏差"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "crowd psychology",
+        "cognitive bias"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《乌合之众》古斯塔夫·勒庞.pdf",
+          "bytes": 792245,
+          "sha256": "75f71025aaf9ef5eb55bdc3dff0a6eca0c25f80b9de76ce39e678e9e8e047821",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E4%B9%8C%E5%90%88%E4%B9%8B%E4%BC%97%E3%80%8B%E5%8F%A4%E6%96%AF%E5%A1%94%E5%A4%AB%C2%B7%E5%8B%92%E5%BA%9E.pdf"
+        }
+      ]
+    },
+    {
+      "id": "fubaba-qiongbaba",
+      "zh": "富爸爸，穷爸爸",
+      "en": "Rich Dad Poor Dad",
+      "author": "罗伯特·清崎",
+      "author_en": "Robert Kiyosaki",
+      "category": "理财入门",
+      "tags": [
+        "现金流",
+        "资产与负债",
+        "入门"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "cash flow",
+        "assets vs liabilities",
+        "beginner"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《富爸爸,穷爸爸》.pdf",
+          "bytes": 728152,
+          "sha256": "3fb984e9efce66deaeb55da3dbb879e122613e605afe0976810ac4cdd6877e4c",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E5%AF%8C%E7%88%B8%E7%88%B8%2C%E7%A9%B7%E7%88%B8%E7%88%B8%E3%80%8B.pdf"
+        }
+      ]
+    },
+    {
+      "id": "xiaogou-qianqian",
+      "zh": "小狗钱钱",
+      "en": "Kira and a Dog Named Money",
+      "author": "博多·舍费尔",
+      "author_en": "Bodo Schäfer",
+      "category": "理财入门",
+      "tags": [
+        "儿童理财",
+        "入门",
+        "储蓄"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "kids money",
+        "beginner",
+        "saving"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《小狗钱钱》.pdf",
+          "bytes": 3800630,
+          "sha256": "7fc00fdf94250ba8f9a910f278fc8084b35d9d488277cf1c9723e72581dda391",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E5%B0%8F%E7%8B%97%E9%92%B1%E9%92%B1%E3%80%8B.pdf"
+        }
+      ]
+    },
+    {
+      "id": "nawaer-baodian",
+      "zh": "纳瓦尔宝典",
+      "en": "The Almanack of Naval Ravikant",
+      "author": "埃里克·乔根森",
+      "author_en": "Eric Jorgenson",
+      "category": "理财入门",
+      "tags": [
+        "财富",
+        "杠杆",
+        "幸福"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "wealth",
+        "leverage",
+        "happiness"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《纳瓦尔宝典》.pdf",
+          "bytes": 3862962,
+          "sha256": "ba11b07fbf0e9ee19f45ed33adcd8399164fcd32ddb3d1e9b5d764397d29ecd2",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E7%BA%B3%E7%93%A6%E5%B0%94%E5%AE%9D%E5%85%B8%E3%80%8B.pdf"
+        }
+      ]
+    },
+    {
+      "id": "nawaer-baodian-caifu",
+      "zh": "纳瓦尔宝典：财富和幸福指南",
+      "en": "The Almanack of Naval Ravikant (alt. edition)",
+      "author": "埃里克·乔根森",
+      "author_en": "Eric Jorgenson",
+      "category": "理财入门",
+      "tags": [
+        "财富",
+        "杠杆",
+        "版本差异"
+      ],
+      "repo": "codeman008/Financial_freedom",
+      "edition_zh": "社区镜像 PDF，扫描版为主，阅读体验不如正版电子书",
+      "edition_en": "Community-mirrored PDF, mostly scanned, inferior to a licensed ebook",
+      "tags_en": [
+        "wealth",
+        "leverage",
+        "edition variant"
+      ],
+      "files": [
+        {
+          "label": "PDF",
+          "path": "books/chinese-canon/《纳瓦尔宝典财富和幸福指南》.pdf",
+          "bytes": 3045825,
+          "sha256": "a383f9473764d2847a2ebc63398dcff5529b2e7be422e36133a2d8ce11089adf",
+          "upstream": "https://raw.githubusercontent.com/codeman008/Financial_freedom/HEAD/%E3%80%8A%E7%BA%B3%E7%93%A6%E5%B0%94%E5%AE%9D%E5%85%B8%E8%B4%A2%E5%AF%8C%E5%92%8C%E5%B9%B8%E7%A6%8F%E6%8C%87%E5%8D%97%E3%80%8B.pdf"
+        }
+      ]
+    }
+  ]
+}
