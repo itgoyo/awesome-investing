@@ -33,7 +33,7 @@ The books were not taken wholesale either. All 21 entries say what problem the b
 
 # **Navigation:**
 
-[Reading paths](#reading-paths) | [Eight chapters](#eight-chapters) | [By question](#by-question) | [Library](#library) | [Glossary](#glossary) | [Scam patterns](#scam-patterns) | [FAQ](#faq) | [Editorial choices](#editorial-choices) | [Build](#build) | [Disclaimer](#disclaimer)
+[Reading paths](#reading-paths) | [Eight chapters](#eight-chapters) | [By question](#by-question) | [Library](#library) | [Glossary](#glossary) | [Scam patterns](#scam-patterns) | [FAQ](#faq) | [Editorial choices](#editorial-choices) | [Build](#build) | [Exchanges](#exchanges-and-community) | [Disclaimer](#disclaimer)
 
 ## Reading paths
 
@@ -272,6 +272,25 @@ python3 scripts/fetch_books.py    # verify and complete the shelf
 python3 scripts/build_site.py     # emit page data
 python3 scripts/build_readme.py   # render both READMEs
 ```
+
+## Exchanges and community
+
+This section is access information for the repository and has nothing to do with the eight chapters. The links carry referral codes: registering through them lowers your fees and pays the repository a small rebate. Neither changes a single judgment in the text.
+
+Crypto trading is restricted in some jurisdictions. Check your local rules first. Principal can be lost in full, and no platform campaign or airdrop is a promise of return.
+
+| Platform | Link | Notes |
+| :--- | :--- | :--- |
+| Binance | [binance.com](https://accounts.binance.com/zh-CN/register?ref=FANXIAN) | Code **FANXIAN**, 20% off fees. The platform also runs an Alpha points campaign; what points are worth depends on the current announcement ([search tutorials](https://www.youtube.com/results?search_query=%E5%B8%81%E5%AE%89alpha)) |
+| OKX | [okx.com](https://www.okx.com/zh-hans/join/50253981) | Code **50253981**, 20% off fees; Boost uses **ZHUANMI** |
+| ByBit | [bybit.com](https://www.bybit.com/invite?ref=66QLX94) | Code **66QLX94**, 20% off fees |
+| Bitget | [bitget.com](https://www.bitget.com/zh-CN/referral/register?clacCode=4BUM7GXX) | Code **4BUM7GXX**, 20% off fees |
+| Gate.io | [gate.io](https://www.gatenode.xyz/share/USDTOKOK) | Code **USDTOKOK**, 20% off fees |
+| HTX | [htx.com](https://www.htx.com.am/invite/zh-cn/1f?invite_code=xpi6a223) | Code **xpi6a223**, 20% off fees |
+| MEXC | [mexc.co](https://promote.mexc.com/r/wIE7fPvG) | Code **wIE7fPvG**, 20% off fees |
+| Telegram group | [@jmhbgroup](https://t.me/jmhbgroup) | General crypto discussion. No signals, no managed accounts, no guaranteed returns; if you meet those, apply the [scam patterns](#scam-patterns) |
+
+**On the 20%.** Rates and campaign rules change without notice; the registration page is the authority. A code only works at signup.
 
 ## Disclaimer
 

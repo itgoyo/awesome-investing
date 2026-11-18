@@ -33,7 +33,7 @@
 
 # **导航：**
 
-[阅读路径](#阅读路径) | [八章正文](#八章正文) | [按问题查](#按问题查) | [书库](#书库) | [术语速查](#术语速查) | [骗局速查](#骗局速查) | [常见问题](#常见问题) | [取舍说明](#取舍说明) | [使用与构建](#使用与构建) | [声明](#声明)
+[阅读路径](#阅读路径) | [八章正文](#八章正文) | [按问题查](#按问题查) | [书库](#书库) | [术语速查](#术语速查) | [骗局速查](#骗局速查) | [常见问题](#常见问题) | [取舍说明](#取舍说明) | [使用与构建](#使用与构建) | [交易所与社群](#交易所与社群) | [声明](#声明)
 
 ## 阅读路径
 
@@ -272,6 +272,25 @@ python3 scripts/fetch_books.py    # 校验并补齐书库文件
 python3 scripts/build_site.py     # 生成页面数据
 python3 scripts/build_readme.py   # 渲染两份 README
 ```
+
+## 交易所与社群
+
+这一节是仓库的入口信息，与前面八章无关。链接含邀请码，通过它们注册能减免手续费，仓库也会拿到少量返佣；这不会改变正文里的任何判断。
+
+加密资产交易在部分司法辖区受限，请先确认所在地法规。本金可能全部损失，任何平台的「活动」「空投」都不构成收益承诺。
+
+| 平台 | 链接 | 说明 |
+| :--- | :--- | :--- |
+| 币安 Binance | [binance.com](https://accounts.binance.com/zh-CN/register?ref=FANXIAN) | 邀请码 **FANXIAN**，手续费减免 20%。平台另有 Alpha 积分活动，积分能换什么以当期公告为准，可看[教程检索](https://www.youtube.com/results?search_query=%E5%B8%81%E5%AE%89alpha) |
+| 欧易 OKX | [okx.com](https://www.okx.com/zh-hans/join/50253981) | 邀请码 **50253981**，手续费减免 20%；Boost 另有邀请码 **ZHUANMI** |
+| ByBit | [bybit.com](https://www.bybit.com/invite?ref=66QLX94) | 邀请码 **66QLX94**，手续费减免 20% |
+| Bitget | [bitget.com](https://www.bitget.com/zh-CN/referral/register?clacCode=4BUM7GXX) | 邀请码 **4BUM7GXX**，手续费减免 20% |
+| Gate.io | [gate.io](https://www.gatenode.xyz/share/USDTOKOK) | 邀请码 **USDTOKOK**，手续费减免 20% |
+| 火币 HTX | [htx.com](https://www.htx.com.am/invite/zh-cn/1f?invite_code=xpi6a223) | 邀请码 **xpi6a223**，手续费减免 20% |
+| 抹茶 MEXC | [mexc.co](https://promote.mexc.com/r/wIE7fPvG) | 邀请码 **wIE7fPvG**，手续费减免 20% |
+| 电报交流群 | [@jmhbgroup](https://t.me/jmhbgroup) | 交流加密资产相关内容。群里不提供喊单、代操作、保本承诺，遇到这几种说法按[骗局速查](#骗局速查)处理 |
+
+**关于「手续费减免 20%」。** 比例与活动规则由平台随时调整，以注册页实际显示为准。邀请码只在注册时生效，注册后再补填无效。
 
 ## 声明
 
